@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="modal-dialog" role="document">
+        <dialog class="modal-content">
+          <header class="modal-header">
+            <h5 class="modal-title" id="modal-cadastro-titulo">Faça seu Cadastro</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </header>
+          <article class="modal-body">
+            <form action="{% url 'cadastro'%}" method="POST">
+              {% csrf_token %}
+              <div class="card-body">
+                <form>
+                  {% include 'alertas.html' %}
+                  <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="password" class="form-control borda-cor-especial" name="nome" placeholder="Insira sua senha" required>
+                 </div>
+                  <div class="form-group">
+                     <label>Email</label>
+                     <input type="text" class="form-control borda-cor-especial" name="email" placeholder="Insira seu Email" required>
+                  </div>
+                  <div class="form-group">
+                     <label>Senha</label>
+                     <input type="password" class="form-control borda-cor-especial" name="senha" placeholder="Insira sua senha" required>
+                  </div>
+                 <button type="submit" class="btn btn-cor-especial" type="submit">Criar sua conta</button>
+               </form>
+          </article>
+        </dialog>
+      </div>
+      </body>
+      </html>
+    
+      {% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Agendamento-->
+    <section id="serviços" class="bg-light">
+        <div class="container pb-5">
+          <div class="row justify-content-md-around justify-content-center">
+  
+            <article class="card mt-5 borda-cor-especial card-imagem">
+              <img src="{% static 'img/Podologia.jpg' %}" class="card-imagem-top" alt="unhas para podologia">
+              <div class="card-body">
+                <h5 class="card-title">{{servico.categora}}</h5>
+                <div class="receipe-duration">
+                  <h6>Serviço: {{servico.categoria}}</h6>
+                  <h6>Profissional: {{servico.profissional}}</h6>
+                  <h6>Horários: {{servico.data}}</h6>
+                <a href="#" class="btn btn-cor-especial" data-toggle="modal" data-target="#modal-podologia">Enviar dados do Agendamento</a>
+              </div>
+            </article> 
+          </div>
+        </div>
+      </section>
+      {% endblock %}

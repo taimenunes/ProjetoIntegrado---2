@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    
+    <!-- Serviços -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+          <a class="navbar-brand fonte-titulo texto-cor-especial" id="cor-titulo" href="#">Schedule Service Now</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+              <li class="nav-item">
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#modal-login" href="{% url 'login' %}">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#modal-agenda" href="{% url 'cadastro' %}">Cadastro</a>
+              </li>
+           </ul>
+          </div>
+        </nav>
+      </header>
+    <section id="titulo">
+        <div class="py-5 px-2">
+          <h1 class="text-center texto-cor-especial fonte-titulo">O melhor lugar para voce é aqui!</h1>
+          <p class="text-center text-secondary">Sinta-se em casa!</p>
+        </div>
+      </section>
+
+    <section id="serviços" class="bg-light">
+      <div class="container pb-5">
+        <div class="row justify-content-md-around justify-content-center">
+          <article class="card mt-5 borda-cor-especial card-imagem">
+            <img src="{% static 'img/Penteados.jpg' %}" class="card-imagem-top" alt="serviços">
+            <div class="card-body">
+              <h5 class="card-title">Cabelos</h5>
+              <p class="card-text">Aqui você encontra o melhor serviço para o que quer.</p>
+            </div>              
+          </article>
+          <article class="card mt-5 borda-cor-especial card-imagem">
+            <img src="{% static 'img/Penteados.jpg' %}" class="card-imagem-top" alt="serviços">
+            <div class="card-body">
+              <h5 class="card-title">Podologia</h5>
+              <p class="card-text">Aqui você encontra o melhor serviço para o que quer.</p>
+           </div>              
+          </article>
+          <article class="card mt-5 borda-cor-especial card-imagem">
+            <img src="{% static 'img/Penteados.jpg' %}" class="card-imagem-top" alt="serviços">
+            <div class="card-body">
+              <h5 class="card-title">Limpeza de Pele</h5>
+              <p class="card-text">Aqui você encontra o melhor serviço para o que quer.</p>
+            </div>              
+          </article>
+        </div>
+      </div>
+      </section>
+      
+      
+
+  <!-- Time -->
+    <section id="nosso-time">
+      <div class="py-5 px-2">
+        <h2 class="text-center texto-cor-especial fonte-titulo">Profissionais</h2>
+        <p class="text-center text-secondary">O desafio de atrair e reter talentos!</p>
+      </div>
+        <ul class="list-unstyled list-inline text-center d-lg-flex justify-content-lg-around">
+          <li class="list-inline-item">
+            <figure class="figure">
+              <img src="{% static 'img/profissionalpele2.jpg' %}" class="img-thumbnail borda-cor-especial thumb-redondo" alt="foto de profissional">
+              <figcaption class="figure-caption text-center texto-cor-especial mt-3 fonte-titulo"><h4>Elicácia</h4></figcaption>
+              <figcaption class="figure-caption text-center">Esteticista</figcaption>
+            </figure>
+          </li>
+          <li class="list-inline-item">
+            <figure class="figure">
+                <img src="{% static 'img/ProfissionalCortes.jpg' %}" class="img-thumbnail borda-cor-especial thumb-redondo" alt="foto de profissional">
+                <figcaption class="figure-caption text-center texto-cor-especial mt-3 fonte-titulo"><h4>Marcela</h4></figcaption>
+                <figcaption class="figure-caption text-center">Especialista em cortes</figcaption>
+            </figure>
+          </li>
+          <li class="list-inline-item">
+            <figure class="figure">
+                <img src="{% static 'img/Profissionalescova.jpg' %}" class="img-thumbnail borda-cor-especial thumb-redondo" alt="foto de profissional">
+                <figcaption class="figure-caption text-center texto-cor-especial mt-3 fonte-titulo"><h4>Rachel</h4></figcaption>
+                <figcaption class="figure-caption text-center">Mestre em escovas e penteados</figcaption>
+            </figure>             
+          </li>
+        </ul>
+      <ul class="list-unstyled list-inline text-center d-lg-flex justify-content-lg-around">
+          <li class="list-inline-item">
+            <figure class="figure">
+              <img src="{% static 'img/ProfissionalUnhas.jpg' %}" class="img-thumbnail borda-cor-especial thumb-redondo" alt="foto do rosto de uma pessoa">
+              <figcaption class="figure-caption text-center texto-cor-especial mt-3 fonte-titulo"><h4>Mariana</h4></figcaption>
+              <figcaption class="figure-caption text-center">Podologa</figcaption>
+            </figure>
+          </li>
+          <li class="list-inline-item">
+            <figure class="figure">
+                <img src="{% static 'img/profissionalpele.jpg' %}" class="img-thumbnail borda-cor-especial thumb-redondo" alt="foto do rosto de uma pessoa">
+                <figcaption class="figure-caption text-center texto-cor-especial mt-3 fonte-titulo"><h4>Fernanda</h4></figcaption>
+                <figcaption class="figure-caption text-center">Esteticista</figcaption>
+            </figure>
+          </li>
+          <li class="list-inline-item">
+            <figure class="figure">
+                <img src="{% static 'img/Profissional1.jpg' %}" class="img-thumbnail borda-cor-especial thumb-redondo" alt="foto do rosto de uma pessoa">
+                <figcaption class="figure-caption text-center texto-cor-especial mt-3 fonte-titulo"><h4>Lucas</h4></figcaption>
+                <figcaption class="figure-caption text-center">Profissional em cortes</figcaption>
+            </figure>             
+          </li>
+        </ul>
+    </section>
+{% endblock %}
